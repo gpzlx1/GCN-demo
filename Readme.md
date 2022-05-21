@@ -77,9 +77,11 @@ $ print(g.ndata)
 - Link Prediction
     - [Link Prediction using Graph Neural Networks](https://docs.dgl.ai/en/latest/tutorials/blitz/4_link_predict.html#sphx-glr-download-tutorials-blitz-4-link-predict-py)
     - [code](./link_pred_demo.py)
+    - ```python3 link_pred_demo.py```
 - Node Classification
     - [Node Classification with DGL](https://docs.dgl.ai/en/latest/tutorials/blitz/1_introduction.html)
     - [code](./node_class_demo.py)
+    - ```python3 node_class_demo.py```
 
 ## Tasks
 Given three datasets (cora, citeseer, ppi), implement the GCN algorithm for node classification and link prediction, and analyse the effect of self-loop, number of layers, DropEdge, PairNorm, activation function and other factors on performance
@@ -87,5 +89,5 @@ Given three datasets (cora, citeseer, ppi), implement the GCN algorithm for node
 ## Tips
 - self-loop : `dgl.remove_self_loop`, `dgl.add_self_loop`
 - DropEdge : `dgl.transforms.DropEdge`
-- Your best friends : [google](google.com), [baidu](baidu.com), [bing](bing.com)
-- other GNN framework is ok, however, you have to prepare everything yourself
+- Your best friends : [google](https://www.google.com), [baidu](https://www.baidu.com), [bing](https://www.bing.com)
+- Other GNN framework is ok, however, you have to prepare everything yourself
