@@ -52,36 +52,34 @@ $ print(g.ndata)
 ```
 
 **Attention** : 
-- `train_mask`, `val_mask`, `test_mask`, `label` are just for node classification. For edge prediction, you should carefully study the case `link_pred_demo.py`
+- `train_mask`, `val_mask`, `test_mask`, `label` are just for node classification. For edge prediction, you should carefully study the case [link_pred_demo.py](./link_pred_demo.py)
 
 - PPI dataset consists of 20 graph and others consists of single graph. For PPI, you should train its graph one by one. I provide a `simple_dataloader` to help you.
     ```python3
     from load_graph import simple_dataloader, load_graph
     # dataset can be list, tuple or other object support __getitem__
-    ## For node classification
+    ## For node classification, it will help for ppi
     dataset = Load_graph('ppi')
     loader = simple_dataloader(dataset=dataset)
     for g in loader:
         print(g)
 
-    ## For edge prediction
+    ## For edge prediction, it will help
     data = [[g1, pos_g1, neg_g1], [g2, pos_g2, neg_g2], ...]
     loader = simple_dataloader(dataset=data)
     for g, pos_g, neg_g in loader:
         print(g, pos_g, neg_g)
     ``` 
 
-- For node classification, the labels for cora and citeseer is integer and you can access dataset.num_classes to get the number of categories. However, for ppi, it's label is vector and you should consider which loss function works. 
-
-More about DGLGraph : https://docs.dgl.ai/en/latest/guide/graph.html
+- For node classification, the labels for cora and citeseer are integer and you can access `dataset.num_classes` to get the number of categories. However, for ppi, it's label is vector and you should consider which loss function works. 
 
 ## Case Study
 - Link Prediction
     - [Link Prediction using Graph Neural Networks](https://docs.dgl.ai/en/latest/tutorials/blitz/4_link_predict.html#sphx-glr-download-tutorials-blitz-4-link-predict-py)
-    - [code]()
+    - [code]((./link_pred_demo.py))
 - Node Classification
     - [Node Classification with DGL](https://docs.dgl.ai/en/latest/tutorials/blitz/1_introduction.html)
-    - [code]()
+    - [code](./node_class_demo.py)
 
 ## Tasks
 Given three datasets (cora, citeseer, ppi), implement the GCN algorithm for node classification and link prediction, and analyse the effect of self-loop, number of layers, DropEdge, PairNorm, activation function and other factors on performance
