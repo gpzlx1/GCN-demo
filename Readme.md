@@ -15,7 +15,7 @@ Basic Knowledge about DGL:
 * [DGL](https://www.dgl.ai/pages/start.html) >= 0.8
 
 ## Dataset
-You can load dataset from `load_graph.py`
+You can load dataset from [load_graph.py](./load_graph.py)
 ```python3
 $ from load_graph import simple_dataloader, load_graph`
 $ dataset = Load_graph('cora')
@@ -54,7 +54,7 @@ $ print(g.ndata)
 **Attention** : 
 - `train_mask`, `val_mask`, `test_mask`, `label` are just for node classification. For edge prediction, you should carefully study the case [link_pred_demo.py](./link_pred_demo.py)
 
-- PPI dataset consists of 20 graph and others consists of single graph. For PPI, you should train its graph one by one. I provide a `simple_dataloader` to help you.
+- PPI dataset consists of 20 graph and others consists of single graph. For PPI, you should train its graph one by one. I provide a [simple_dataloader](./load_graph.py#L4) to help you.
     ```python3
     from load_graph import simple_dataloader, load_graph
     # dataset can be list, tuple or other object support __getitem__
@@ -76,7 +76,7 @@ $ print(g.ndata)
 ## Case Study
 - Link Prediction
     - [Link Prediction using Graph Neural Networks](https://docs.dgl.ai/en/latest/tutorials/blitz/4_link_predict.html#sphx-glr-download-tutorials-blitz-4-link-predict-py)
-    - [code]((./link_pred_demo.py))
+    - [code](./link_pred_demo.py)
 - Node Classification
     - [Node Classification with DGL](https://docs.dgl.ai/en/latest/tutorials/blitz/1_introduction.html)
     - [code](./node_class_demo.py)
@@ -85,5 +85,5 @@ $ print(g.ndata)
 Given three datasets (cora, citeseer, ppi), implement the GCN algorithm for node classification and link prediction, and analyse the effect of self-loop, number of layers, DropEdge, PairNorm, activation function and other factors on performance
 
 ## Tips
-- self-loop : dgl.remove_self_loop, dgl.add_self_loop
-- DropEdge : dgl.transforms.DropEdge
+- self-loop : `dgl.remove_self_loop`, `dgl.add_self_loop`
+- DropEdge : `dgl.transforms.DropEdge`
