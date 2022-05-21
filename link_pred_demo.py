@@ -17,9 +17,7 @@ By the end of this tutorial you will be able to
 
 """
 
-import imp
 import dgl
-from sklearn import datasets
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
