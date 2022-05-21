@@ -19,6 +19,7 @@ By the end of this tutorial you will be able to
 
 import imp
 import dgl
+from sklearn import datasets
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -72,7 +73,8 @@ import dgl.data
 from  load_graph import Load_graph
 
 #dataset = dgl.data.CoraGraphDataset()
-g = Load_graph('citeseer', 'edge')
+dataset = Load_graph('citeseer', 'edge')
+g = dataset[0]
 
 
 ######################################################################
