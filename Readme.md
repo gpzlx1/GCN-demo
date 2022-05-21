@@ -88,4 +88,4 @@ Given three datasets (cora, citeseer, ppi), implement the GCN algorithm for node
 - self-loop : `dgl.remove_self_loop`, `dgl.add_self_loop`
 - DropEdge : `dgl.transforms.DropEdge`
 - Your best friends : [google](https://www.google.com), [baidu](https://www.baidu.com), [bing](https://www.bing.com)
-- other GNN framework is ok, however, you have to prepare everything yourself
+- Other GNN framework is ok, however, you have to prepare everything yourself
