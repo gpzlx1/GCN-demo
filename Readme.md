@@ -16,7 +16,8 @@ Basic Knowledge about DGL:
 
 ## Dataset
 You can load dataset from `load_graph.py`
-```shell
+```python3
+$ from load_graph import simple_dataloader, load_graph`
 $ dataset = Load_graph('cora')
 
 # Access the first graph, it will return a DGLGraph
