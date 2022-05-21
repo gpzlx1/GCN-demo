@@ -46,11 +46,3 @@ def Load_graph(data : str, task_type='node'):
         raise Exception('unknown data')
 
     return dataset
-
-
-dataset = Load_graph('ppi')
-dataset = [[1,2,3], [4,5,6], [7,8,9]]
-loader = simple_dataloader(dataset=dataset)
-print(len(loader))
-for g in loader:
-    print(g)

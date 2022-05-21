@@ -1,4 +1,6 @@
+import imp
 import dgl
+from sklearn import datasets
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -37,8 +39,9 @@ import torch.nn.functional as F
 # 
 
 import dgl.data
-
-dataset = dgl.data.CoraGraphDataset()
+from load_graph import Load_graph
+#dataset = dgl.data.CoraGraphDataset()
+dataset = Load_graph('cora', 'node')
 print('Number of categories:', dataset.num_classes)
 
 
